@@ -1,0 +1,63 @@
+---
+layout: default
+title: "Послуги ServisGO"
+description: "Каталог всіх доступних послуг на платформі ServisGO. Ремонт, клінінг, меблеві роботи, доставки та інші послуги по всій Україні."
+permalink: /services/
+---
+
+<div class="services-page">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">Наші послуги</h1>
+            <p class="page-description">
+                Оберіть потрібну категорію послуг та знайдіть надійного виконавця
+            </p>
+        </div>
+
+        <div class="services-grid">
+            {% for category in site.services_categories %}
+            <div class="service-category">
+                <div class="service-category__icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="service-category__content">
+                    <h2 class="service-category__title">{{ category.name }}</h2>
+                    <p class="service-category__description">{{ category.description }}</p>
+                    <a href="{{ '/services/' | append: category.slug | relative_url }}" class="btn btn--primary">
+                        Переглянути послуги
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="services-cta">
+            <h2>Не знайшли потрібну послугу?</h2>
+            <p>Зв'яжіться з нами, і ми допоможемо знайти виконавця для ваших потреб</p>
+            <a href="{{ '/contact/' | relative_url }}" class="btn btn--outline">Зв'язатися з нами</a>
+        </div>
+    </div>
+</div>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Каталог послуг ServisGO",
+    "description": "Список всіх доступних категорій послуг",
+    "itemListElement": [
+        {% for category in site.services_categories %}
+        {
+            "@type": "ListItem",
+            "position": {{ forloop.index }},
+            "item": {
+                "@type": "Service",
+                "name": "{{ category.name }}",
+                "description": "{{ category.description }}",
+                "url": "{{ site.url }}/services/{{ category.slug }}"
+            }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ]
+}
+</script>

@@ -1,0 +1,154 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'uk' }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    {% seo %}
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ServisGO",
+        "url": "{{ site.url }}",
+        "logo": "{{ site.url }}/assets/images/logo.png",
+        "description": "{{ site.description }}",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+380-XX-XXX-XXXX",
+            "contactType": "customer service",
+            "email": "{{ site.email }}"
+        },
+        "sameAs": [
+            "https://www.facebook.com/servisgo.ua",
+            "https://www.instagram.com/servisgo.ua"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="{{ '/' | relative_url }}" class="nav__logo">
+                    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="ServisGO" class="nav__logo-img">
+                    <span class="nav__logo-text">ServisGO</span>
+                </a>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="{{ '/' | relative_url }}" class="nav__link">Головна</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ '/services/' | relative_url }}" class="nav__link">Послуги</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ '/about/' | relative_url }}" class="nav__link">Про нас</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="{{ '/contact/' | relative_url }}" class="nav__link">Контакти</a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">ServisGO</h3>
+                    <p class="footer__description">
+                        Сучасна платформа для пошуку та замовлення послуг по всій Україні.
+                    </p>
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com/servisgo.ua" class="footer__social-link" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/servisgo.ua" class="footer__social-link" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://t.me/servisgo_ua" class="footer__social-link" target="_blank" rel="noopener">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Послуги</h4>
+                    <ul class="footer__list">
+                        {% for category in site.services_categories %}
+                        <li class="footer__item">
+                            <a href="{{ '/services/' | append: category.slug | relative_url }}" class="footer__link">
+                                {{ category.name }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Контакти</h4>
+                    <div class="footer__contact">
+                        <p class="footer__contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+                        </p>
+                        <p class="footer__contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+380XXXXXXXXX">+380 XX XXX XX XX</a>
+                        </p>
+                        <p class="footer__contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Україна
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">
+                    &copy; {{ 'now' | date: "%Y" }} ServisGO. Всі права захищені.
+                </p>
+                <div class="footer__links">
+                    <a href="{{ '/privacy/' | relative_url }}" class="footer__link">Політика конфіденційності</a>
+                    <a href="{{ '/terms/' | relative_url }}" class="footer__link">Умови використання</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

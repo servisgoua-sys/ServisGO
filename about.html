@@ -1,0 +1,149 @@
+---
+layout: default
+title: "Про нас - ServisGO"
+description: "ServisGO - сучасна платформа для пошуку та замовлення послуг по всій Україні. Дізнайтеся більше про нашу місію та цінності."
+permalink: /about/
+---
+
+<div class="about-page">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">Про нас</h1>
+            <p class="page-description">
+                ServisGO - це сучасна платформа, яка змінює спосіб пошуку та замовлення послуг в Україні
+            </p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-story">
+                <div class="about-story__content">
+                    <h2>Наша історія</h2>
+                    <p>
+                        ServisGO було створено з метою спростити процес пошуку та замовлення послуг в Україні. 
+                        Ми розуміли, що багато людей стикаються з проблемами знаходження надійних виконавців 
+                        для різних потреб - від ремонту квартири до прибирання офісу.
+                    </p>
+                    <p>
+                        Наша команда об'єднала досвідчених фахівців з IT, маркетингу та сфери послуг, 
+                        щоб створити платформу, яка дійсно працює на користь як клієнтів, так і виконавців.
+                    </p>
+                </div>
+                <div class="about-story__image">
+                    <img src="{{ '/assets/images/about-story.jpg' | relative_url }}" alt="Команда ServisGO" class="about-img">
+                </div>
+            </div>
+
+            <div class="about-mission">
+                <h2>Наша місія</h2>
+                <div class="mission-grid">
+                    <div class="mission-item">
+                        <div class="mission-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Об'єднуємо людей</h3>
+                        <p>Створюємо зв'язки між клієнтами та якісними виконавцями послуг</p>
+                    </div>
+                    <div class="mission-item">
+                        <div class="mission-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Гарантуємо якість</h3>
+                        <p>Всі виконавці проходять ретельну перевірку та мають рейтинги від клієнтів</p>
+                    </div>
+                    <div class="mission-item">
+                        <div class="mission-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Економимо час</h3>
+                        <p>Швидкий пошук та замовлення послуг за кілька кліків</p>
+                    </div>
+                    <div class="mission-item">
+                        <div class="mission-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Забезпечуємо безпеку</h3>
+                        <p>Захищені платежі та страхування всіх робіт</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-values">
+                <h2>Наші цінності</h2>
+                <div class="values-list">
+                    <div class="value-item">
+                        <h3>Прозорість</h3>
+                        <p>Чіткі ціни, відкриті рейтинги та чесні відгуки від реальних клієнтів</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Надійність</h3>
+                        <p>Перевірені виконавці, гарантія якості та підтримка на кожному етапі</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Інновації</h3>
+                        <p>Використовуємо сучасні технології для покращення сервісу</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>Клієнтоорієнтованість</h3>
+                        <p>Кожне рішення приймається з урахуванням потреб наших клієнтів</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-stats">
+                <h2>ServisGO в цифрах</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Задоволених клієнтів</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Перевірених виконавців</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Міст України</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Підтримка клієнтів</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-team">
+                <h2>Наша команда</h2>
+                <p>
+                    За ServisGO стоїть команда професіоналів, які працюють над тим, 
+                    щоб зробити пошук послуг максимально зручним та безпечним.
+                </p>
+                <div class="team-cta">
+                    <a href="{{ '/contact/' | relative_url }}" class="btn btn--primary">
+                        Приєднатися до команди
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Про нас - ServisGO",
+    "description": "ServisGO - сучасна платформа для пошуку та замовлення послуг по всій Україні",
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "ServisGO",
+        "description": "{{ site.description }}",
+        "url": "{{ site.url }}",
+        "foundingDate": "2023",
+        "numberOfEmployees": "50+",
+        "areaServed": {
+            "@type": "Country",
+            "name": "Ukraine"
+        }
+    }
+}
+</script>

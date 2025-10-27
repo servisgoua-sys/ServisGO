@@ -1,0 +1,81 @@
+# Site settings
+title: "ServisGO - Онлайн-сервіс для замовлення послуг в Україні"
+description: "ServisGO - сучасна платформа для пошуку та замовлення послуг по всій Україні. Ремонт, клінінг, меблеві роботи, доставки та інші послуги."
+url: "https://servisgo.com.ua"
+baseurl: ""
+
+# SEO settings
+author: "ServisGO"
+email: "support@servisgo.com.ua"
+lang: "uk"
+timezone: "Europe/Kiev"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+relative_links: true
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  services:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# SEO and Social Media
+twitter:
+  username: servisgo_ua
+facebook:
+  app_id: your_facebook_app_id
+google_analytics: your_google_analytics_id
+
+# Custom variables
+services_categories:
+  - name: "Ремонт та будівництво"
+    slug: "remont-budivnytstvo"
+    description: "Ремонт квартир, будинків, офісів та інші будівельні роботи"
+  - name: "Клінінг та прибирання"
+    slug: "klininh-prybirannya"
+    description: "Прибирання квартир, офісів, хімчистка, миття вікон"
+  - name: "Меблеві роботи"
+    slug: "meblevi-roboty"
+    description: "Виготовлення, ремонт та збірка меблів"
+  - name: "Доставка та перевезення"
+    slug: "dostavka-perevezennia"
+    description: "Доставка товарів, перевезення речей, кур'єрські послуги"
+  - name: "IT та техніка"
+    slug: "it-tekhnika"
+    description: "Ремонт комп'ютерів, налаштування мереж, IT-консалтинг"
+  - name: "Особисті послуги"
+    slug: "osobysti-posluhy"
+    description: "Перукарські послуги, масаж, фітнес-тренер"

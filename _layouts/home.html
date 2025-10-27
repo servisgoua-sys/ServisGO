@@ -1,0 +1,115 @@
+---
+layout: default
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero__content">
+            <h1 class="hero__title">
+                Знайдіть надійних виконавців для будь-яких послуг
+            </h1>
+            <p class="hero__description">
+                ServisGO - це сучасна платформа, яка дозволяє легко та швидко знайти і замовити послуги у будь-якому місті України.
+            </p>
+            <div class="hero__actions">
+                <a href="{{ '/services/' | relative_url }}" class="btn btn--primary">
+                    Переглянути послуги
+                </a>
+                <a href="viber://pa?chatURI=servisgobot" class="btn btn--secondary">
+                    <i class="fab fa-viber"></i>
+                    Viber-бот
+                </a>
+            </div>
+        </div>
+        <div class="hero__image">
+            <img src="{{ '/assets/images/hero-image.png' | relative_url }}" alt="ServisGO - Онлайн-сервіс послуг" class="hero__img">
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="container">
+        <h2 class="section__title">Чому обирають ServisGO</h2>
+        <div class="features__grid">
+            <div class="feature__card">
+                <div class="feature__icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3 class="feature__title">Швидкий пошук</h3>
+                <p class="feature__description">
+                    Знайдіть потрібну послугу за кілька секунд завдяки зручному каталогу та фільтрам
+                </p>
+            </div>
+            <div class="feature__card">
+                <div class="feature__icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3 class="feature__title">Перевірені виконавці</h3>
+                <p class="feature__description">
+                    Всі виконавці проходять верифікацію та мають рейтинги від реальних клієнтів
+                </p>
+            </div>
+            <div class="feature__card">
+                <div class="feature__icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="feature__title">Безпечні платежі</h3>
+                <p class="feature__description">
+                    Захищені транзакції та гарантія якості виконаних робіт
+                </p>
+            </div>
+            <div class="feature__card">
+                <div class="feature__icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3 class="feature__title">Підтримка 24/7</h3>
+                <p class="feature__description">
+                    Наша команда завжди готова допомогти вам з будь-якими питаннями
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services">
+    <div class="container">
+        <h2 class="section__title">Популярні категорії послуг</h2>
+        <div class="services__grid">
+            {% for category in site.services_categories %}
+            <div class="service__card">
+                <div class="service__icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3 class="service__title">{{ category.name }}</h3>
+                <p class="service__description">{{ category.description }}</p>
+                <a href="{{ '/services/' | append: category.slug | relative_url }}" class="service__link">
+                    Детальніше <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta">
+    <div class="container">
+        <div class="cta__content">
+            <h2 class="cta__title">Готові почати?</h2>
+            <p class="cta__description">
+                Приєднуйтесь до тисяч задоволених клієнтів, які вже користуються ServisGO
+            </p>
+            <div class="cta__actions">
+                <a href="{{ site.url }}" class="btn btn--primary btn--large" target="_blank">
+                    Перейти до платформи
+                </a>
+                <a href="{{ '/contact/' | relative_url }}" class="btn btn--outline btn--large">
+                    Зв'язатися з нами
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

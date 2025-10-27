@@ -1,0 +1,128 @@
+---
+layout: default
+title: "Ремонт та будівництво - ServisGO"
+description: "Послуги ремонту квартир, будинків, офісів та інші будівельні роботи. Знайдіть надійних майстрів для ремонту по всій Україні."
+permalink: /services/remont-budivnytstvo/
+---
+
+<div class="service-page">
+    <div class="container">
+        <div class="service-header">
+            <div class="service-header__icon">
+                <i class="fas fa-hammer"></i>
+            </div>
+            <div class="service-header__content">
+                <h1 class="service-title">Ремонт та будівництво</h1>
+                <p class="service-description">
+                    Повний спектр будівельних та ремонтних робіт для вашого дому, офісу або комерційного приміщення
+                </p>
+            </div>
+        </div>
+
+        <div class="service-content">
+            <div class="service-types">
+                <h2>Види послуг</h2>
+                <div class="service-types__grid">
+                    <div class="service-type">
+                        <h3>Косметичний ремонт</h3>
+                        <ul>
+                            <li>Поклейка шпалер</li>
+                            <li>Фарбування стін</li>
+                            <li>Установка плінтусів</li>
+                            <li>Заміна розеток та вимикачів</li>
+                        </ul>
+                    </div>
+                    <div class="service-type">
+                        <h3>Капітальний ремонт</h3>
+                        <ul>
+                            <li>Демонтаж старих конструкцій</li>
+                            <li>Заміна електрики</li>
+                            <li>Заміна сантехніки</li>
+                            <li>Утеплення та звукоізоляція</li>
+                        </ul>
+                    </div>
+                    <div class="service-type">
+                        <h3>Будівництво</h3>
+                        <ul>
+                            <li>Зведення будинків</li>
+                            <li>Прибудови та надбудови</li>
+                            <li>Балкони та лоджії</li>
+                            <li>Гаражі та сараї</li>
+                        </ul>
+                    </div>
+                    <div class="service-type">
+                        <h3>Спеціалізовані роботи</h3>
+                        <ul>
+                            <li>Покрівельні роботи</li>
+                            <li>Фасадні роботи</li>
+                            <li>Підлогові покриття</li>
+                            <li>Скляні конструкції</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-benefits">
+                <h2>Переваги роботи з нами</h2>
+                <div class="benefits-grid">
+                    <div class="benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Гарантія якості</h3>
+                        <p>Всі роботи виконуються з дотриманням стандартів та з гарантією</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-clock"></i>
+                        <h3>Дотримання термінів</h3>
+                        <p>Чіткі терміни виконання та контроль якості на кожному етапі</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>Прозорі ціни</h3>
+                        <p>Фіксована вартість без прихованих доплат та переплат</p>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Страхування</h3>
+                        <p>Повне страхування робіт та майна під час виконання</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-cta">
+                <h2>Готові замовити ремонт?</h2>
+                <p>Отримайте безкоштовну консультацію та розрахунок вартості</p>
+                <div class="cta-actions">
+                    <a href="{{ site.url }}" class="btn btn--primary" target="_blank">
+                        Замовити послугу
+                    </a>
+                    <a href="{{ '/contact/' | relative_url }}" class="btn btn--outline">
+                        Консультація
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Ремонт та будівництво",
+    "description": "Повний спектр будівельних та ремонтних робіт для вашого дому, офісу або комерційного приміщення",
+    "provider": {
+        "@type": "Organization",
+        "name": "ServisGO",
+        "url": "{{ site.url }}"
+    },
+    "areaServed": {
+        "@type": "Country",
+        "name": "Ukraine"
+    },
+    "serviceType": "Construction and Renovation Services",
+    "offers": {
+        "@type": "Offer",
+        "description": "Ремонт квартир, будинків, офісів та інші будівельні роботи"
+    }
+}
+</script>

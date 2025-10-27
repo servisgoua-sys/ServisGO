@@ -1,0 +1,169 @@
+---
+layout: default
+title: "Контакти - ServisGO"
+description: "Зв'яжіться з командою ServisGO. Телефон, email, соціальні мережі. Ми завжди готові допомогти вам з будь-якими питаннями."
+permalink: /contact/
+---
+
+<div class="contact-page">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">Контакти</h1>
+            <p class="page-description">
+                Зв'яжіться з нами будь-яким зручним способом. Ми завжди готові допомогти!
+            </p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-method__icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-method__content">
+                            <h3>Email</h3>
+                            <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+                            <span>Відповідаємо протягом 24 годин</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-method__icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-method__content">
+                            <h3>Телефон</h3>
+                            <p><a href="tel:+380XXXXXXXXX">+380 XX XXX XX XX</a></p>
+                            <span>Пн-Пт: 9:00-18:00</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-method__icon">
+                            <i class="fab fa-viber"></i>
+                        </div>
+                        <div class="contact-method__content">
+                            <h3>Viber</h3>
+                            <p><a href="viber://pa?chatURI=servisgobot">ServisGO Bot</a></p>
+                            <span>Швидкі відповіді 24/7</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-method__icon">
+                            <i class="fab fa-telegram-plane"></i>
+                        </div>
+                        <div class="contact-method__content">
+                            <h3>Telegram</h3>
+                            <p><a href="https://t.me/servisgo_ua" target="_blank">@servisgo_ua</a></p>
+                            <span>Онлайн підтримка</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h3>Соціальні мережі</h3>
+                    <div class="social-links__grid">
+                        <a href="https://www.facebook.com/servisgo.ua" class="social-link" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com/servisgo.ua" class="social-link" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://www.youtube.com/servisgo" class="social-link" target="_blank" rel="noopener">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Напишіть нам</h3>
+                <form class="form" action="https://formspree.io/f/your-form-id" method="POST">
+                    <div class="form-group">
+                        <label for="name">Ім'я *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Тема *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Оберіть тему</option>
+                            <option value="general">Загальні питання</option>
+                            <option value="service">Питання про послуги</option>
+                            <option value="partnership">Співпраця</option>
+                            <option value="support">Технічна підтримка</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Повідомлення *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">
+                        Відправити повідомлення
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Часті питання</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>Як замовити послугу?</h3>
+                    <p>Перейдіть на нашу платформу, оберіть потрібну категорію послуг та знайдіть виконавця. Або зв'яжіться з нами через Viber-бот для швидкого замовлення.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Чи гарантується якість послуг?</h3>
+                    <p>Так, всі виконавці проходять верифікацію та мають рейтинги від реальних клієнтів. Ми також надаємо гарантію на виконані роботи.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Як оплачувати послуги?</h3>
+                    <p>Ви можете оплачувати карткою, готівкою або через банківський переказ. Всі платежі захищені та безпечні.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Чи працюєте ви по всій Україні?</h3>
+                    <p>Так, наші послуги доступні у всіх великих містах України. Поступово розширюємо географію на менші міста.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Контакти ServisGO",
+    "description": "Зв'яжіться з командою ServisGO будь-яким зручним способом",
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "ServisGO",
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "telephone": "+380-XX-XXX-XXXX",
+                "contactType": "customer service",
+                "email": "{{ site.email }}",
+                "availableLanguage": "Ukrainian"
+            }
+        ],
+        "sameAs": [
+            "https://www.facebook.com/servisgo.ua",
+            "https://www.instagram.com/servisgo.ua",
+            "https://t.me/servisgo_ua"
+        ]
+    }
+}
+</script>
